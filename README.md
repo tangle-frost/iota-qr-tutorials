@@ -9,6 +9,7 @@ The following tutorials use the all in All-In-One library from:
 ### Browser
 
 * [Render Types](./using-library/browser/render-types/) - Render QR Codes in the Browser using All-In-One library.
+* [Data](./using-library/browser/data/) - Render IOTA Data as QR Codes in the Browser using All-In-One library.
 
 ### NodeJS
 

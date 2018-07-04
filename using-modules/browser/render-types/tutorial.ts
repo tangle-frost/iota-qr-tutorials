@@ -1,48 +1,29 @@
+import { Color } from "@tangle-frost/iota-core/dist/data/color";
 import { QR } from "@tangle-frost/iota-qr-core/dist/qr";
 import { QRRendererFactory } from "@tangle-frost/iota-qr-render/dist/factories/qrRendererFactory";
 import { initRender } from "@tangle-frost/iota-qr-render/dist/initRender";
 
 export function updateQRCodes(): void {
     document.getElementById("error").innerHTML = "";
-    document.getElementById("jpegQR").innerHTML = "";
-    document.getElementById("pngQR").innerHTML = "";
-    document.getElementById("svgQR").innerHTML = "";
-    document.getElementById("canvasQR").innerHTML = "";
-    document.getElementById("txtQR").innerHTML = "";
+    document.getElementById("outputQR").innerHTML = "";
 
     try {
         const qr = new QR(parseInt((<HTMLInputElement>document.getElementById("typeNumber")).value, 10));
         qr.addText((<HTMLInputElement>document.getElementById("testData")).value);
         const qrCellData = qr.generate();
 
-        const jpegRenderer = QRRendererFactory.instance().create("jpeg");
-        jpegRenderer.renderHtml(qrCellData)
+        const renderer = QRRendererFactory.instance().create(
+                    (<HTMLInputElement>document.getElementById("testRenderType")).value, 
+                    { 
+                        foreground: Color.fromHex((<HTMLInputElement>document.getElementById("testForeground")).value),
+                        background: Color.fromHex((<HTMLInputElement>document.getElementById("testBackground")).value)
+                    });
+        renderer.renderHtml(
+                    qrCellData,
+                    parseInt((<HTMLInputElement>document.getElementById("testCellSize")).value, 10),
+                    parseInt((<HTMLInputElement>document.getElementById("testMarginSize")).value, 10))
             .then((htmlElement) => {
-                document.getElementById("jpegQR").appendChild(htmlElement);
-            });
-
-        const pngRenderer = QRRendererFactory.instance().create("png");
-        pngRenderer.renderHtml(qrCellData)
-            .then((htmlElement) => {
-                document.getElementById("pngQR").appendChild(htmlElement);
-            });
-
-        const svgRenderer = QRRendererFactory.instance().create("svg");
-        svgRenderer.renderHtml(qrCellData)
-            .then((htmlElement) => {
-                document.getElementById("svgQR").appendChild(htmlElement);
-            });
-
-        const canvasRenderer = QRRendererFactory.instance().create("canvas");
-        canvasRenderer.renderHtml(qrCellData)
-            .then((htmlElement) => {
-                document.getElementById("canvasQR").appendChild(htmlElement);
-            });
-
-        const txtRenderer = QRRendererFactory.instance().create("text");
-        txtRenderer.renderHtml(qrCellData)
-            .then((htmlElement) => {
-                document.getElementById("txtQR").appendChild(htmlElement);
+                document.getElementById("outputQR").appendChild(htmlElement);
             });
     } catch (err) {
         document.getElementById("error").innerHTML = err;
@@ -51,3 +32,5 @@ export function updateQRCodes(): void {
 
 initRender();
 updateQRCodes();
+
+document.getElementById("updateButton").onclick = () => updateQRCodes();

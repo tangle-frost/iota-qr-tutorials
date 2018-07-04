@@ -5,3 +5,7 @@ package-lock.*
 .nyc_output
 .vscode
 *.log
+*.jpg
+*.png
+*.svg
+*.txt

@@ -15,29 +15,26 @@
 <body>
     <h1>Tangle Frost - IOTA QR Codes - Render Types</h1>
 
-    <p>Displayed below you should see QR codes rendered in all the available formats.</p>
+        <p>Select the options in the form below to modify the QR code.</p>
 
     <label for="testData">Test Data</label> <input id="testData" value="This is a test"/><br/>
-    <label for="typeNumber">QR Type Number</label> <input id="typeNumber" value="6"/><br/>
-    <button onclick="updateQRCodes()">Update QR Codes</button>
+    <label for="testRenderType">Render Type</label> <select id="testRenderType">
+        <option>jpeg</option>
+        <option>png</option>
+        <option>svg</option>
+        <option>canvas</option>
+        <option>text</option>
+    </select><br/>
+    <label for="testForeground">Foreground Color</label> <input id="testForeground" value="#000000"/><br/>
+    <label for="testBackground">Background Color</label> <input id="testBackground" value="#FFFFFF"/><br/>
+    <label for="testCellSize">Cell Size</label> <input id="testCellSize" value="5"/><br/>
+    <label for="testMarginSize">Margin Size</label> <input id="testMarginSize" value="10"/><br/>
+    <label for="typeNumber">QR Type Number (0 for auto)</label> <input id="typeNumber" value="6"/><br/>
+    <button id="updateButton">Update QR Codes</button>
     <br/>
     <br/>
     <div id="error"></div>
-
-    <div>JPEG</div>
-    <div id="jpegQR"></div>
-
-    <div>PNG</div>
-    <div id="pngQR"></div>
-
-    <div>SVG</div>
-    <div id="svgQR"></div>
-
-    <div>CANVAS</div>
-    <div id="canvasQR"></div>
-
-    <div>TXT</div>
-    <div id="txtQR"></div>
+    <div id="outputQR"></div>
 
     <script src="./tutorial.bundle.js"></script>
 </body>
