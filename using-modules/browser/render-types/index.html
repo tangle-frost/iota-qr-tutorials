@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tangle Frost - IOTA QR Codes - Render Types</title>
+    <style>
+        .qr-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tangle Frost - IOTA QR Codes - Render Types</h1>
+
+    <p>Displayed below you should see QR codes rendered in all the available formats.</p>
+
+    <label for="testData">Test Data</label> <input id="testData" value="This is a test"/><br/>
+    <label for="typeNumber">QR Type Number</label> <input id="typeNumber" value="6"/><br/>
+    <button onclick="updateQRCodes()">Update QR Codes</button>
+    <br/>
+    <br/>
+    <div id="error"></div>
+
+    <div>JPEG</div>
+    <div id="jpegQR"></div>
+
+    <div>PNG</div>
+    <div id="pngQR"></div>
+
+    <div>SVG</div>
+    <div id="svgQR"></div>
+
+    <div>CANVAS</div>
+    <div id="canvasQR"></div>
+
+    <div>TXT</div>
+    <div id="txtQR"></div>
+
+    <script src="./tutorial.bundle.js"></script>
+</body>
+
