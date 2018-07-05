@@ -16,9 +16,7 @@
         "webpack-cli": "^3.0.8"
     },
     "scripts": {
-        "build": "tsc",
-        "bundle": "webpack",
-        "dist": "npm-run-all build bundle",
-        "serve": "serve"
+        "build": "tsc && webpack",
+        "start": "serve"
     }
 }

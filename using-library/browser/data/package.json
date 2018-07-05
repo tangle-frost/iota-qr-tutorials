@@ -11,6 +11,7 @@
         "serve": "^9.1.0"
     },
     "scripts": {
-        "serve": "serve"
+        "build": "echo \"No need to build this project\"",
+        "start": "serve"
     }
 }
