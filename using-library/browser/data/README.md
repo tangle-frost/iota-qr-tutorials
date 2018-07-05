@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This tutorial demonstrates using the different IOTA QR data maniupulation methods in your browser from the all-in-one library.
+This tutorial demonstrates using the different IOTA QR data manipulation methods in your browser from the all-in-one library.
 
 ## Data
 
@@ -19,36 +19,44 @@ First include the library:
 <script src="./node_modules/@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js"></script>
 ```
 
-In order to render the QR data we first create an instance of the QR class, add the data and then generate the cell data.
+In order to render the QR data we first generate the payment data.
 
 ```js
-const qr = new IotaQR.QR();
-qr.addText("This is a test");
-const qrCellData = qr.generate();
+const paymentData = IotaQR.TrinityPaymentQR.generatePaymentData(
+                    address,
+                    value,
+                    tag,
+                    message);
 ```
 
-We can then use any of the renderers to generate an HTML element from the cell data.
+We can then render the QR code with the options of our choice.
 
 ```js
-const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpeg");
-jpegRenderer.renderHtml(qrCellData)
+IotaQR.TrinityPaymentQR.renderHtml(paymentData, "jpg", 16)
     .then((htmlElement) => {
-        // Now add the element to the DOM
+        // Add the element to the dom
+    });
+```
+
+or we can render just an address instead of full payment data, no need for a QR code typeNumber as an address always requires the same capacity QR code.
+
+```js
+IotaQR.AddressQR.renderHtml("AAAA...AAA", "jpg")
+    .then((htmlElement) => {
+        // Add the element to the dom
     });
 ```
 
 We can supply different options to the render to change colors and sizes.
 
 ```js
-const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpeg", {
-    foreground: IotaQR.Color.fromHex("#FF0000"),
-    background: IotaQR.Color.fromHex("#00FF00"),
-    cssClass: "my-custom-class"
-});
-const cellSize = 20;
-const marginSize = 0;
-jpegRenderer.renderHtml(qrCellData, cellSize, marginSize)
-    .then((htmlElement) => {
-        // Now add the element to the DOM
-    });
+IotaQR.TrinityPaymentQR.renderHtml(paymentData, "jpg", 16, 4, 0,
+        {
+            foreground: IotaQR.Color.fromHex("#FF0000"),
+            background: IotaQR.Color.fromHex("#00FF00"),
+            cssClass: "my-custom-class"
+        })
+        .then((htmlElement) => {
+            // Add the element to the dom
+        });
 ```

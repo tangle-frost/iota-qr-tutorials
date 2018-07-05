@@ -33,7 +33,7 @@ const qrCellData = qr.generate();
 We can then use any of the renderers to generate an HTML element from the cell data.
 
 ```js
-const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpeg");
+const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpg");
 jpegRenderer.renderHtml(qrCellData)
     .then((htmlElement) => {
         // Now add the element to the DOM
@@ -43,7 +43,7 @@ jpegRenderer.renderHtml(qrCellData)
 We can supply different options to the render to change colors and sizes.
 
 ```js
-const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpeg", {
+const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpg", {
     foreground: IotaQR.Color.fromHex("#FF0000"),
     background: IotaQR.Color.fromHex("#00FF00"),
     cssClass: "my-custom-class"

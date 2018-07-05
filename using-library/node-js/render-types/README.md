@@ -33,7 +33,7 @@ const qrCellData = qr.generate();
 We can then use any of the renderers to generate the raw image data from the cell data.
 
 ```js
-const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpeg");
+const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpg");
 jpegRenderer.renderRaw(qrCellData)
     .then((rawData) => {
         // Now save the data
@@ -43,7 +43,7 @@ jpegRenderer.renderRaw(qrCellData)
 We can supply different options to the render to change colors and sizes.
 
 ```js
-const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpeg", {
+const jpegRenderer = IotaQR.QRRendererFactory.instance().create("jpg", {
     foreground: IotaQR.Color.fromHex("#FF0000"),
     background: IotaQR.Color.fromHex("#00FF00")
 });

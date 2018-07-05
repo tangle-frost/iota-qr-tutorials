@@ -23,11 +23,11 @@
     <label for="testTag">Tag (Trytes)</label> <input id="testTag" value=""/><br/>
     <label for="testMessage">Message (Plain Text)</label> <input id="testMessage" value=""/><br/>
     <label for="testRenderType">Render Type</label> <select id="testRenderType">
-        <option>jpeg</option>
+        <option>jpg</option>
         <option>png</option>
         <option>svg</option>
+        <option>txt</option>
         <option>canvas</option>
-        <option>text</option>
     </select><br/>
     <label for="typeNumber">QR Type Number (0 for auto)</label> <input id="typeNumber" value="16"/><br/>
     <button onclick="generateQRCodePaymentData()">Generate QR Code for Payment Data</button>
@@ -35,11 +35,11 @@
     <p>Enter your data in the form to generate a QR code for Address.</p>
     <label for="testAddress2">Address (Trytes)</label> <input id="testAddress2" value=""/><br/>
     <label for="testRenderType2">Render Type</label> <select id="testRenderType2">
-        <option>jpeg</option>
+        <option>jpg</option>
         <option>png</option>
         <option>svg</option>
+        <option>txt</option>
         <option>canvas</option>
-        <option>text</option>
     </select><br/>
     <button onclick="generateQRCodeAddress()">Generate QR Code for Address</button>
     <br/>
@@ -54,13 +54,13 @@
 
             try {
                 const val = document.getElementById("testAmount").value;
-                const paymentData = IotaQR.Trinity.generatePaymentData(
+                const paymentData = IotaQR.TrinityPaymentQR.generatePaymentData(
                     document.getElementById("testAddress").value,
                     val.length > 0 ? parseInt(val, 10) : undefined,
                     document.getElementById("testTag").value,
                     document.getElementById("testMessage").value);
 
-                IotaQR.Trinity.paymentQRHtml(paymentData, 
+                IotaQR.TrinityPaymentQR.renderHtml(paymentData, 
                     document.getElementById("testRenderType").value,
                     parseInt(document.getElementById("typeNumber").value, 10))
                     .then((htmlElement) => {
@@ -80,7 +80,7 @@
             document.getElementById("outputQR").innerHTML = "";
 
             try {
-                IotaQR.Trinity.addressQRHtml(document.getElementById("testAddress2").value, document.getElementById("testRenderType2").value)
+                IotaQR.AddressQR.renderHtml(document.getElementById("testAddress2").value, document.getElementById("testRenderType2").value)
                     .then((htmlElement) => {
                         document.getElementById("outputQR").appendChild(htmlElement);
                     })

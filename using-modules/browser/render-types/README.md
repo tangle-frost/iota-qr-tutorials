@@ -35,7 +35,7 @@ const qrCellData = qr.generate();
 We can then use any of the renderers to generate an HTML element from the cell data.
 
 ```js
-const jpegRenderer = QRRendererFactory.instance().create("jpeg");
+const jpegRenderer = QRRendererFactory.instance().create("jpg");
 jpegRenderer.renderHtml(qrCellData)
     .then((htmlElement) => {
         // Now add the element to the DOM
@@ -45,7 +45,7 @@ jpegRenderer.renderHtml(qrCellData)
 Instead of generating an HTML element we can generate raw data which could be saved to a file.
 
 ```js
-const jpegRenderer = QRRendererFactory.instance().create("jpeg");
+const jpegRenderer = QRRendererFactory.instance().create("jpg");
 jpegRenderer.renderRaw(data)
     .then((data) => {
         // Now save the data to a file
@@ -57,7 +57,7 @@ We can supply different options to the render to change colors and sizes.
 ```js
 import { Color } from "@tangle-frost/iota-core/dist/data/color";
 
-const jpegRenderer = QRRendererFactory.instance().create("jpeg", {
+const jpegRenderer = QRRendererFactory.instance().create("jpg", {
     foreground: Color.fromHex("#FF0000"),
     background: Color.fromHex("#00FF00"),
     cssClass: "my-custom-class"
