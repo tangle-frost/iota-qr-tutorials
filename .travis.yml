@@ -57,13 +57,17 @@ script:
   - npm run build
   - cd ../../../using-library/node-js/data
   - npm run build
+  - npm run start
   - cd ../../../using-library/node-js/render-types
   - npm run build
+  - npm run start
   - cd ../../../using-modules/browser/data
   - npm run build
   - cd ../../../using-modules/browser/render-types
   - npm run build
   - cd ../../../using-modules/node-js/data
   - npm run build
+  - npm run start
   - cd ../../../using-modules/node-js/render-types
   - npm run build
+  - npm run start
