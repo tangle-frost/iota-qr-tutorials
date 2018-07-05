@@ -51,7 +51,7 @@ install:
   - npm link @tangle-frost/iota-core @tangle-frost/iota-qr-core @tangle-frost/iota-qr-render @tangle-frost/iota-qr-data
   - npm install
 script:
-  - cd ./using-library/browser/data
+  - cd ../../../using-library/browser/data
   - npm run build
   - cd ../../../using-library/browser/render-types
   - npm run build
