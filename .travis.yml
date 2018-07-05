@@ -26,7 +26,7 @@ install:
   - cd tangle-frost/iota-qr-lib
   - npm link @tangle-frost/iota-core @tangle-frost/iota-qr-core @tangle-frost/iota-qr-render @tangle-frost/iota-qr-data
   - npm link
-  - cd using-library/browser/data
+  - cd ../../../iota-qr-tutorials/using-library/browser/data
   - npm link @tangle-frost/iota-qr-lib
   - npm install
   - cd ../../../using-library/browser/render-types
