@@ -34,3 +34,27 @@ The following tutorials use the individual modules from:
 
 * [Render Types](./using-modules/node-js/render-types/) - Render QR Codes in NodeJS using Modules.
 * [Data](./using-modules/node-ks/data/) - Render IOTA Data as QR Codes in NodeJS using Modules.
+
+# Contributing
+
+Contributions are always welcome to the project. Feel free to raise issues, create pull requests or just make suggestions.
+
+# Authors
+
+Come and find us on the IOTA [Discord](https://discordapp.com/invite/fNGZXvh) development channels
+
+* **Martyn Janes** - *obany* - ([https://github.com/obany](https://github.com/obany))
+
+# Donations
+
+IOTA donations are always welcome :smile:
+
+![QR Code for Trinity](./donation.png)
+
+```shell
+QWJXX99QDEYWUWXEGA9QXSNOWOKHMFKCMSZTXDFLRZAFQRPQTHQDXSZWQQTAHNDNRYHMIKJYWQLKTFHBWSAOJDHAMB
+```
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.

@@ -6,6 +6,3 @@ package-lock.*
 .vscode
 *.log
 *.jpg
-*.png
-*.svg
-*.txt
