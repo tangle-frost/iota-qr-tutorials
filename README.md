@@ -8,13 +8,13 @@ The following tutorials use the All-In-One library from:
 
 ### Browser
 
-* [Render Types](./using-library/browser/render-types/) - Render QR Codes in the Browser using the All-In-One library.
-* [Data](./using-library/browser/data/) - Render IOTA Data as QR Codes in the Browser using the All-In-One library.
+* [Render Types](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-library/browser/render-types/) - Render QR Codes in the Browser using the All-In-One library.
+* [Data](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-library/browser/data/) - Render IOTA Data as QR Codes in the Browser using the All-In-One library.
 
 ### NodeJS
 
-* [Render Types](./using-library/node-js/render-types/) - Render QR Codes in NodeJS using the All-In-One library.
-* [Data](./using-library/node-js/data/) - Render IOTA Data as QR Codes in NodeJS using the All-In-One library.
+* [Render Types](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-library/node-js/render-types/) - Render QR Codes in NodeJS using the All-In-One library.
+* [Data](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-library/node-js/data/) - Render IOTA Data as QR Codes in NodeJS using the All-In-One library.
 
 ## Using Modules
 
@@ -27,13 +27,13 @@ The following tutorials use the individual modules from:
 
 ### Browser
 
-* [Render Types](./using-modules/browser/render-types/) - Render QR Codes in the Browser using Modules.
-* [Data](./using-modules/browser/data/) - Render IOTA Data as QR Codes in the Browser using Modules.
+* [Render Types](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-modules/browser/render-types/) - Render QR Codes in the Browser using Modules.
+* [Data](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-modules/browser/data/) - Render IOTA Data as QR Codes in the Browser using Modules.
 
 ### NodeJS
 
-* [Render Types](./using-modules/node-js/render-types/) - Render QR Codes in NodeJS using Modules.
-* [Data](./using-modules/node-ks/data/) - Render IOTA Data as QR Codes in NodeJS using Modules.
+* [Render Types](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-modules/node-js/render-types/) - Render QR Codes in NodeJS using Modules.
+* [Data](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/using-modules/node-ks/data/) - Render IOTA Data as QR Codes in NodeJS using Modules.
 
 # Contributing
 
@@ -57,4 +57,4 @@ QWJXX99QDEYWUWXEGA9QXSNOWOKHMFKCMSZTXDFLRZAFQRPQTHQDXSZWQQTAHNDNRYHMIKJYWQLKTFHB
 
 # License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/tangle-frost/iota-qr-tutorials/blob/master/LICENSE) file for details.
