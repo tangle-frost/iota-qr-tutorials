@@ -26,46 +26,44 @@ install:
   - cd tangle-frost/iota-qr-lib
   - npm link @tangle-frost/iota-core @tangle-frost/iota-qr-core @tangle-frost/iota-qr-render @tangle-frost/iota-qr-data
   - npm link
-  - cd ../iota-qr-tutorials/using-library/browser/data
+  - cd using-library/browser/data
   - npm link @tangle-frost/iota-qr-lib
   - npm install
-  - cd ../../../../iota-qr-tutorials/using-library/browser/render-types
+  - cd ../../../using-library/browser/render-types
   - npm link @tangle-frost/iota-qr-lib
   - npm install
-  - cd ../../../../iota-qr-tutorials/using-library/node-js/data
+  - cd ../../../using-library/node-js/data
   - npm link @tangle-frost/iota-qr-lib
   - npm install
-  - cd ../../../../iota-qr-tutorials/using-library/node-js/render-types
+  - cd ../../../using-library/node-js/render-types
   - npm link @tangle-frost/iota-qr-lib
   - npm install
-  - cd ../../../../iota-qr-tutorials/using-modules/browser/data
+  - cd ../../../using-modules/browser/data
   - npm link @tangle-frost/iota-core @tangle-frost/iota-qr-core @tangle-frost/iota-qr-render @tangle-frost/iota-qr-data
   - npm install
-  - cd ../../../../iota-qr-tutorials/using-modules/browser/render-types
+  - cd ../../../using-modules/browser/render-types
   - npm link @tangle-frost/iota-core @tangle-frost/iota-qr-core @tangle-frost/iota-qr-render @tangle-frost/iota-qr-data
   - npm install
-  - cd ../../../../iota-qr-tutorials/using-modules/node-js/data
+  - cd ../../../using-modules/node-js/data
   - npm link @tangle-frost/iota-core @tangle-frost/iota-qr-core @tangle-frost/iota-qr-render @tangle-frost/iota-qr-data
   - npm install
-  - cd ../../../../iota-qr-tutorials/using-modules/node-js/render-types
+  - cd ../../../using-modules/node-js/render-types
   - npm link @tangle-frost/iota-core @tangle-frost/iota-qr-core @tangle-frost/iota-qr-render @tangle-frost/iota-qr-data
   - npm install
-  - cd ../../../../
 script:
-  - npm run dist || travis_terminate 1
-  - cd ./iota-qr-tutorials/using-library/browser/data
+  - cd ./using-library/browser/data
   - npm run build
-  - cd ../../../../iota-qr-tutorials/using-library/browser/render-types
+  - cd ../../../using-library/browser/render-types
   - npm run build
-  - cd ../../../../iota-qr-tutorials/using-library/node-js/data
+  - cd ../../../using-library/node-js/data
   - npm run build
-  - cd ../../../../iota-qr-tutorials/using-library/node-js/render-types
+  - cd ../../../using-library/node-js/render-types
   - npm run build
-  - cd ../../../../iota-qr-tutorials/using-modules/browser/data
+  - cd ../../../using-modules/browser/data
   - npm run build
-  - cd ../../../../iota-qr-tutorials/using-modules/browser/render-types
+  - cd ../../../using-modules/browser/render-types
   - npm run build
-  - cd ../../../../iota-qr-tutorials/using-modules/node-js/data
+  - cd ../../../using-modules/node-js/data
   - npm run build
-  - cd ../../../../iota-qr-tutorials/using-modules/node-js/render-types
+  - cd ../../../using-modules/node-js/render-types
   - npm run build
