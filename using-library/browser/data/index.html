@@ -62,8 +62,7 @@
 
                 IotaQR.TrinityPaymentQR.renderHtml(paymentData, 
                     document.getElementById("testRenderType").value,
-                    parseInt(document.getElementById("typeNumber").value, 10),
-                    2)
+                    parseInt(document.getElementById("typeNumber").value, 10))
                     .then((htmlElement) => {
                         document.getElementById("outputQR").appendChild(htmlElement);
                     })
@@ -81,7 +80,7 @@
             document.getElementById("outputQR").innerHTML = "";
 
             try {
-                IotaQR.AddressQR.renderHtml(document.getElementById("testAddress2").value, document.getElementById("testRenderType2").value, 2, 0)
+                IotaQR.AddressQR.renderHtml(document.getElementById("testAddress2").value, document.getElementById("testRenderType2").value)
                     .then((htmlElement) => {
                         document.getElementById("outputQR").appendChild(htmlElement);
                     })
