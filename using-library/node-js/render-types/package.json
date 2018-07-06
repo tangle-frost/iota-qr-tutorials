@@ -1,14 +1,14 @@
 {
     "name": "@tangle-frost/iota-qr-tutorials",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "IOTA QR Tutorials",
     "author": "Martyn Janes <martyn@iota.eco>",
     "license": "MIT",
     "dependencies": {
-        "@tangle-frost/iota-qr-lib": "^0.0.4"
+        "@tangle-frost/iota-qr-lib": "^0.0.5"
     },
     "devDependencies": {
-        "@types/node": "^10.5.1",
+        "@types/node": "^10.5.2",
         "typescript": "^2.7.2"
     },
     "scripts": {
