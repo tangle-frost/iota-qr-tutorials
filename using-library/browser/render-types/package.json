@@ -8,7 +8,7 @@
         "@tangle-frost/iota-qr-lib": "^0.0.5"
     },
     "devDependencies": {
-        "serve": "^9.2.0"
+        "serve": "^9.4.0"
     },
     "scripts": {
         "build": "echo \"No need to build this project\"",

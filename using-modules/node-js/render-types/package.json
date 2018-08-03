@@ -10,8 +10,8 @@
         "@tangle-frost/iota-qr-render": "^0.0.5"
     },
     "devDependencies": {
-        "@types/node": "^10.5.2",
-        "typescript": "^2.7.2"
+        "@types/node": "^10.5.5",
+        "typescript": "^3.0.1"
     },
     "scripts": {
         "build": "tsc",
