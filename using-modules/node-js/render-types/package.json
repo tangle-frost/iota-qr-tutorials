@@ -10,7 +10,7 @@
         "@tangle-frost/iota-qr-render": "^0.0.5"
     },
     "devDependencies": {
-        "@types/node": "^10.5.5",
+        "@types/node": "^10.5.6",
         "typescript": "^3.0.1"
     },
     "scripts": {
