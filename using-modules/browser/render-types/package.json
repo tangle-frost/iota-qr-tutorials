@@ -5,16 +5,16 @@
     "author": "Martyn Janes <martyn@iota.eco>",
     "license": "MIT",
     "dependencies": {
-        "@tangle-frost/iota-core": "^0.0.9",
-        "@tangle-frost/iota-qr-core": "^0.0.9",
-        "@tangle-frost/iota-qr-render": "^0.0.9"
+        "@tangle-frost/iota-core": "0.0.9",
+        "@tangle-frost/iota-qr-core": "0.0.9",
+        "@tangle-frost/iota-qr-render": "0.0.9"
     },
     "devDependencies": {
-        "npm-run-all": "^4.1.5",
-        "serve": "^10.1.2",
-        "typescript": "^3.3.3",
-        "webpack": "^4.29.3",
-        "webpack-cli": "^3.2.3"
+        "npm-run-all": "4.1.5",
+        "serve": "10.1.2",
+        "typescript": "3.3.3",
+        "webpack": "4.29.3",
+        "webpack-cli": "3.2.3"
     },
     "scripts": {
         "build": "tsc && webpack",

@@ -5,10 +5,10 @@
     "author": "Martyn Janes <martyn@iota.eco>",
     "license": "MIT",
     "dependencies": {
-        "@tangle-frost/iota-qr-lib": "^0.0.9"
+        "@tangle-frost/iota-qr-lib": "0.0.9"
     },
     "devDependencies": {
-        "serve": "^10.1.2"
+        "serve": "10.1.2"
     },
     "scripts": {
         "build": "echo \"No need to build this project\"",
